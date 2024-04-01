@@ -1,21 +1,39 @@
 let currpg = 1;
 
-document.getElementById("previous").addEventListener("click", previous);
-document.getElementById("next").addEventListener("click", next);
+const prev = document.getElementById("previous");
+const nex = document.getElementById("next");
 
+prev.style.visibility = "hiddden";
+nex.style.visibility = "hidden";
+
+
+if(currpg == 1){
+  prev.style.visibility = "hidden";
+}
+if(currpg==18){
+  nex.style.visibility = "hidden";
+}
 
 
 function previous() {
   if (currpg > 1) {
+
     currpg--;
+
+
   }
+
+ 
   getData();
 }
 
 function next() {
   if (currpg < 18) {
+    
     currpg++;
+   
   }
+
   getData();
 }
 
@@ -37,7 +55,15 @@ async function getData() {
 
   ch.innerHTML = "Chapter " + chNo;
 
+
+
+  
+
   document.getElementById("loader").style.display="none";
+  prev.style.visibility = "visible";
+  nex.style.visibility = "visible";
+  prev.addEventListener("click", previous)
+  nex.addEventListener("click", next)
 }
 
 getData();

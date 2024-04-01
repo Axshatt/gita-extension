@@ -1,6 +1,7 @@
 {
   "name": "Bhagvad Gita Summaries",
   "version": "0.0.1",
+  "description":"All summary of the Bhagvad Gita Book containing 18 Chapters.",
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "index.html",

@@ -32,3 +32,8 @@ body{
     transform-origin:50% 50%;
   animation: makeBookLargeAnim 3s ease-in-out alternate infinite;
   }
+
+
+  #loader{
+    padding-top: 20%;
+  }
